@@ -12,4 +12,4 @@ model, _, _ = create_model_and_transforms(
 )
 
 # Save the state_dict to ./model
-torch.save(model.state_dict(), './model//ViT-L-14-336px.pth')
+torch.save(model.state_dict(), './model//ViT-L-14-336px.pt')
