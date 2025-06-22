@@ -8,7 +8,7 @@ DATA_PATH = {
     # "Colon_cvc300": f"{BASE_PATH}/data/Colon/CVC-300",
     # "Colon_Kvasir": f"{BASE_PATH}/data/Colon/Kvasir",
     # "BTAD": f"{BASE_PATH}/data/BTech_Dataset_transformed",
-    # "MPDD": f"{BASE_PATH}/data/MPDD",
+    "MPDD": f"{BASE_PATH}/data/MPDD",
     "MVTec": f"{BASE_PATH}/data/mvtec_anomaly_detection",
     "VisA": f"{BASE_PATH}/data/VisA",
 }
