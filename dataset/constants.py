@@ -1,16 +1,16 @@
-BASE_PATH = "/mnt/task_runtime/AA-CLIP"
+BASE_PATH = "/mnt/task_runtime"
 DATA_PATH = {
-    # "Brain": f"{BASE_PATH}/data/MedAD/Brain_AD",
-    # "Liver": f"{BASE_PATH}/data/MedAD/Liver_AD",
-    # "Retina": f"{BASE_PATH}/data/MedAD/Retina_RESC_AD",
-    # "Colon_clinicDB": f"{BASE_PATH}/data/Colon/CVC-ClinicDB",
-    # "Colon_colonDB": f"{BASE_PATH}/data/Colon/CVC-ColonDB",
-    # "Colon_cvc300": f"{BASE_PATH}/data/Colon/CVC-300",
-    # "Colon_Kvasir": f"{BASE_PATH}/data/Colon/Kvasir",
-    # "BTAD": f"{BASE_PATH}/data/BTech_Dataset_transformed",
-    "MPDD": f"{BASE_PATH}/data/MPDD",
-    "MVTec": f"{BASE_PATH}/data/mvtec_anomaly_detection",
-    "VisA": f"{BASE_PATH}/data/VisA",
+    # "Brain": f"{BASE_PATH}/datasets/BraTS2021_slice",
+    # "Liver": f"{BASE_PATH}/datasets/camelyon16_256",
+    # "Retina": f"{BASE_PATH}/datasets/RESC",
+    # "Colon_clinicDB": f"{BASE_PATH}/datasets/cvc_kvasir/CVC-ClinicDB",
+    # "Colon_colonDB": f"{BASE_PATH}/datasets/cvc_kvasir/CVC-ColonDB",
+    # "Colon_cvc300": f"{BASE_PATH}/datasets/cvc_kvasir/CVC-300",
+    # "Colon_Kvasir": f"{BASE_PATH}/datasets/cvc_kvasir/Kvasir",
+    # "BTAD": f"{BASE_PATH}/datasets/btad",
+    "MPDD": f"{BASE_PATH}/datasets/MPDD",
+    "MVTec": f"{BASE_PATH}/datasets/mvtec_anomaly_detection",
+    "VisA": f"{BASE_PATH}/datasets/VisA",
 }
 
 CLASS_NAMES = {
