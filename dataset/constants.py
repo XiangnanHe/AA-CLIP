@@ -10,7 +10,7 @@ DATA_PATH = {
     # "BTAD": f"{BASE_PATH}/datasets/btad",
     "MPDD": f"{BASE_PATH}/datasets/MPDD",
     "MVTec": f"{BASE_PATH}/datasets/mvtec_anomaly_detection",
-    "VisA": f"{BASE_PATH}/datasets/VisA",
+    "VisA": f"{BASE_PATH}/datasets/one_vision/VisA",
 }
 
 CLASS_NAMES = {
