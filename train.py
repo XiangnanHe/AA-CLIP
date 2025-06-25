@@ -229,6 +229,13 @@ def main():
     # set device
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda:0" if use_cuda else "cpu")
+    
+    # Multi-GPU setup
+    num_gpus = torch.cuda.device_count()
+    use_multi_gpu = num_gpus > 1
+    if use_multi_gpu:
+        print(f"Using {num_gpus} GPUs with DataParallel")
+    
     # ========================================================
     # load model
     # setup image feature extractor after surgery
@@ -258,6 +265,13 @@ def main():
         image_adapt_until=args.image_adapt_until,
         relu=args.relu,
     ).to(device)
+    
+    # Wrap with DataParallel for multi-GPU
+    if use_multi_gpu:
+        model = nn.DataParallel(model)
+        clip_surgery = nn.DataParallel(clip_surgery)
+        clip_model = nn.DataParallel(clip_model)
+    
     model.eval()
     # set optimizer
     text_optimizer = torch.optim.Adam(

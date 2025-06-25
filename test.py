@@ -139,6 +139,13 @@ def main():
     # set device
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda:0" if use_cuda else "cpu")
+    
+    # Multi-GPU setup
+    num_gpus = torch.cuda.device_count()
+    use_multi_gpu = num_gpus > 1
+    if use_multi_gpu:
+        print(f"Using {num_gpus} GPUs with DataParallel")
+    
     # ========================================================
     # load model
     # set up model for testing
@@ -158,6 +165,12 @@ def main():
         image_adapt_until=args.image_adapt_until,
         relu=args.relu,
     ).to(device)
+    
+    # Wrap with DataParallel for multi-GPU
+    if use_multi_gpu:
+        model = nn.DataParallel(model)
+        clip_model = nn.DataParallel(clip_model)
+    
     model.eval()
     # load checkpoints if exists
     text_file = glob(args.save_path + "/text_adapter.pth")
